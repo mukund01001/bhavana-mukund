@@ -1,4 +1,4 @@
-# Bhavana & Mukund — PADHARO · The Royal Gateway (v7)
+# Bhavana & Mukund — PADHARO · The Royal Gateway (v8)
 
 A mobile-first (9:16) scroll-driven Jaipur wedding invitation in one folder.
 Open `index.html` in any modern browser, or deploy the whole folder to
@@ -19,12 +19,42 @@ images/
   doli.webp             golden doli — rides the timeline thread
   mandala.webp          blue peacock mandala plate (wheels + medallions)
   desert.webp           desert village panorama (closing)
-  photo-01..10.webp     the couple's 10 photos (1400px, q80)
+  ganesha-mark.webp     golden Ganesha mandala (gate doorway + hero crown)
+  logo-mark.webp        MB monogram emblem (nav, hero palace, RSVP seal)
+  logo-full.webp        monogram emblem on the scratch-card reveal
+  photo-01..11.webp     the couple's 11 photos (1400px, q80)
   og-cover.jpg          WhatsApp / social preview card (1200x630)
-audio/
+audio:
   mangal-rang.mp3       "Mangal Rang Hai Prem Ke Rango Ka Sangam"
                         (begins once the doors stand open; mute button in the nav)
 ```
+
+## What changed in v8 (this pass)
+
+- **Hero emblems aligned.** The golden Ganesha mandala now crowns the hero
+  ABOVE the "Shubh Vivah" text (with a soft dark halo so it reads crisply
+  against the sunset), and the MB monogram sits at the centre of the palace
+  facade below the text — nothing merges with the names any more.
+- **Scratch card sealed properly.** The date text used to paint ABOVE the
+  foil (a z-index slip), so "18 JANUARY 2027" was readable before
+  scratching. The foil now fully covers the card; scratching (or Tap to
+  reveal) uncovers the monogram at the TOP with the date lines BELOW it.
+- **Baraat & Varmala split inside the same card**: BARAAT NIKASI · 4:30 PM
+  and VARMALA · 5:30 PM listed separately (side strip now says
+  "Day Two · 4:30 pm onwards"). The Add-to-calendar button downloads BOTH
+  events (two VEVENTs in one .ics; Android opens Baraat Nikasi pre-filled).
+- **Add-to-calendar dates fixed** — the old date string was invalid
+  (`2027-01-18T163000:00`), so every generated invite carried NaN
+  timestamps. All 7 events now land at their real IST times.
+- **बत्तीसी** — the Hindi spelling on the Battisi card is corrected.
+- **Gallery revolves on its own.** A twin of every photo rides behind the
+  strip, so it auto-advances every ~3.8 s in an endless, seamless loop
+  (no visible rewind). It pauses the moment you touch, hover, arrow, open
+  the lightbox or leave the section, and drifts on ~7 s later.
+- **New gallery photo**: "Our First Jyotirling Darshan" (the temple selfie,
+  photo-11) — 10 photos in the strip now.
+- Verified at 360 / 393 / 1440 px, light + dark: zero console errors,
+  scratch sealed before the reveal, seamless loop wrap-around tested.
 
 ## What changed in v7 (the final polish pass)
 
@@ -158,7 +188,7 @@ The site was rebuilt around the reference video, portrait (9:16) first:
   on the RSVP card.
 - Closing sign-off over the desert caravan panorama; hashtag
   **#MukundKiBhavana** now live in the hero, the closing and the share text.
-- Countdown runs to the real first event (17 Jan 2027, 11:00 am IST);
+- Countdown runs to the wedding evening (18 Jan 2027, 7:00 pm IST);
   scratch card reveals at 42% with a gold/crimson confetti burst.
 - Verified at 360/393/412/768/1440 px: no horizontal scroll, zero console
   errors, dark scheme + reduced-motion + low-end tiers all handled.
@@ -167,6 +197,7 @@ The site was rebuilt around the reference video, portrait (9:16) first:
 
 | Key | Meaning | While empty |
 |---|---|---|
+| `GROOM.grand` / `BRIDE.grand` | "Grandson/Granddaughter of …" line above the parents' line | the line hides itself |
 | `GROOM.parents` / `BRIDE.parents` | "Son/Daughter of …" lines under the portrait cards | the line hides itself |
 | `MUSIC_SRC` | currently `audio/mangal-rang.mp3` | music toggle hidden |
 | `PHOTO_GALLERY_URL` | Kamero / PicsDrop gallery link (Memories QR) | section hidden |
@@ -174,10 +205,12 @@ The site was rebuilt around the reference video, portrait (9:16) first:
 | `RSVP_ENDPOINT` | Google Apps Script web-app URL or Formspree ID | WhatsApp message flow |
 | `WISHES_ENDPOINT` | separate URL; empty = **reuse `RSVP_ENDPOINT`** (one sheet, `type` column splits rows) | this-device wish wall |
 | `WHATSAPP_URL` | `wa.me/qr/…` contact chip (Surendra Kumar Rathi) | chip hidden |
+| `WHATSAPP_URL_2` | `wa.me/qr/…` contact chip (Vasudev Toshniwal) | chip hidden |
 | `MAPS_URL` | GET DIRECTIONS target (Maps search on the full address) | — |
 
-`PHOTOS` (same block) lists the ten photos with their face-crop position,
-alt text, gallery caption and an inline base64 micro-thumbnail.
+`PHOTOS` (same block) lists the nine gallery photos with their face-crop
+position, alt text, gallery caption and an inline base64 micro-thumbnail
+(the marigold-swing portrait lives only in The Couple section).
 `EVENTS` lists the six real events with their dates/times (add-to-calendar
 buttons are generated from it).
 
@@ -192,19 +225,20 @@ contact and the Maps links. Nothing to re-paste.
 
 ```js
 /** RSVP + Wishes — one sheet. Columns:
- *  Timestamp | Type | Name | Attending | Guests | Events | Notes | Wish */
+ *  Timestamp | Type | Name | Side | Attending | Guests | Coming | Travel | Wish */
 function doPost(e) {
   var d = JSON.parse(e.postData.contents);
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName('Responses') || ss.insertSheet('Responses');
   if (sh.getLastRow() === 0)
-    sh.appendRow(['Timestamp','Type','Name','Attending','Guests','Events','Notes','Wish']);
+    sh.appendRow(['Timestamp','Type','Name','Side','Attending','Guests','Coming','Travel','Wish']);
   sh.appendRow([
     new Date(), d.type || '', d.name || '',
+    d.type === 'rsvp' ? (d.side || '') : '',
     d.type === 'rsvp' ? (d.attending ? 'Yes' : 'No') : '',
     d.type === 'rsvp' ? (d.guests || '') : '',
-    d.type === 'rsvp' ? ((d.events || []).join('; ')) : '',
-    d.type === 'rsvp' ? (d.notes || '') : '',
+    d.type === 'rsvp' ? (d.when || '') : '',
+    d.type === 'rsvp' ? (d.transport || '') : '',
     d.type === 'wish' ? (d.text || '') : ''
   ]);
   return ContentService.createTextOutput(JSON.stringify({ ok: true }))
@@ -289,12 +323,15 @@ Import the `bhavana-mukund` repo → Framework preset: **Other** →
 ## Notes
 
 - Dates and times are fixed facts: 17–18 January 2027, Utsav, Vijay Bari,
-  Vidyadhar Nagar, Jaipur (IST). Countdown target: 17 Jan, 11:00 am IST
-  (Battisi, the first event).
-- "Add to calendar" generates a `.ics` (2-hour default duration).
+  Vidyadhar Nagar, Jaipur (IST). Countdown target: 18 Jan, 7:00 pm IST
+  (the wedding evening).
+- "Add to calendar" generates a `.ics` (2-hour default duration); the
+  Baraat & Varmala card generates both events in one file.
 - Music begins once the doors stand open (browser autoplay rules are
   satisfied by the tap), volume 45%, looped; the nav button mutes/unmutes
   and the choice is remembered.
-- The scratch card remembers the reveal on that device (Reset re-foils it).
+- The scratch card always loads covered in foil (Reset re-foils it).
+- The gallery revolves by itself and pauses for your touch; the lightbox
+  keeps it paused while open.
 - Tested at 360/390/412/768/1440 px, dark scheme, reduced-motion tier and
   low-end tier; no horizontal scroll, no console errors.

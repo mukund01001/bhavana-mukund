@@ -224,14 +224,12 @@ main{position:relative;z-index:1}
 .hpal{position:absolute;inset:-2% -2% -6%;background:url(images/palace-sunset.webp) 50% 50%/cover no-repeat;
   transform-origin:50% 70%;will-change:transform}
 .hsky{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;
-  padding:clamp(52px,9dvh,110px) 18px 0;text-align:center;color:#FFF7E6;
+  padding:clamp(34px,6dvh,68px) 18px 0;text-align:center;color:#FFF7E6;
   text-shadow:0 2px 18px rgba(60,20,6,.8),0 10px 44px rgba(60,20,6,.5);will-change:opacity,transform}
 .hscript{font:400 clamp(34px,9.2vw,66px)/1.05 var(--script);color:#FFF3DC;margin:8px 0 2px;text-shadow:0 3px 26px rgba(64,22,8,.65),0 12px 52px rgba(64,22,8,.5)}
 .hnames{font:700 clamp(17px,4.8vw,36px)/1.2 var(--title);letter-spacing:.18em;color:#FFFBF0;
   text-shadow:0 2px 14px rgba(60,20,6,.85),0 6px 34px rgba(60,20,6,.6)}
-.hdate{font:600 clamp(10.5px,2.9vw,14px)/1.5 var(--sans);letter-spacing:.28em;color:#FFF6E2;margin-top:10px;
-  text-shadow:0 2px 12px rgba(60,20,6,.9),0 4px 22px rgba(60,20,6,.7)}
-.hhash{display:inline-block;margin-top:10px;padding:6px 14px;border:1.4px solid rgba(245,215,127,.8);border-radius:999px;
+.hhash{display:inline-block;margin-top:14px;padding:6px 14px;border:1.4px solid rgba(245,215,127,.8);border-radius:999px;
   font:600 11.5px/1 var(--sans);letter-spacing:.16em;color:#FFF6E2;background:rgba(90,30,10,.25)}
 .hcue{position:absolute;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:2;
   color:#FFF6E2;opacity:.9;animation:cue 1.8s ease-in-out infinite}
@@ -279,17 +277,17 @@ main{position:relative;z-index:1}
 .scratch .st{font:700 clamp(17px,4.6vw,22px)/1 var(--title);letter-spacing:.24em;color:var(--crimson)}
 @media (prefers-color-scheme:dark){.scratch .st{color:var(--gold-lite)}}
 .scratch .ss{font:500 13px/1.4 var(--sans);color:var(--ink-3);margin-top:6px}
-.sc-area{position:relative;width:min(88vw,440px);height:clamp(150px,26vw,208px);margin:16px auto 0;
+.sc-area{position:relative;width:min(88vw,440px);height:clamp(198px,34vw,254px);margin:16px auto 0;
   border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-.sc-under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+.sc-under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   background:
     radial-gradient(90% 120% at 50% -20%,rgba(212,175,55,.28),transparent 55%),
-    linear-gradient(180deg,#FBF3E4,#F4E8D2);padding:12px;text-align:center}
+    linear-gradient(180deg,#FBF3E4,#F4E8D2);padding:14px 12px;text-align:center}
 .sc-under .m1{font:700 clamp(20px,5.4vw,26px)/1.2 var(--title);letter-spacing:.1em;color:#7A1C1C}
 .sc-under .m2{font:700 clamp(17px,4.6vw,22px)/1.2 var(--title);color:#9E3B33}
 .sc-under .m3{font:600 12px/1.4 var(--sans);letter-spacing:.22em;color:#9E3B33;text-transform:uppercase}
 .sc-under .m4{font:500 clamp(14px,3.6vw,17px)/1.5 var(--serif);font-style:italic;color:#8A5A32;max-width:30em}
-.sc-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.sc-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;z-index:3}
 .sc-canvas.done{pointer-events:none;opacity:0;transition:opacity .8s ease .15s}
 .sc-tools{display:flex;justify-content:center;gap:12px;margin-top:14px}
 .sc-tools .btn{min-height:44px}
@@ -393,7 +391,7 @@ main{position:relative;z-index:1}
 .glitter{position:absolute;inset:0;width:100%;height:100%}
 .spot{position:absolute;border-radius:50%;filter:blur(16px);opacity:.55;pointer-events:none}
 .spot.s1{width:130px;height:130px;left:10%;top:8%;background:radial-gradient(circle,#E9C258,transparent 70%)}
-.spot.s2{width:150px;height:150px;right:6%;top:30%;background:radial-gradient(circle,#C2456A,transparent 70%)}
+.spot.s2{width:150px;height:150px;right:6%;top:30%;background:radial-gradient(circle,#3EBD93,transparent 70%)}
 .st-disco{width:62px;height:88px;position:relative;z-index:2;transform-origin:50% 0;animation:discosway 3.4s ease-in-out infinite alternate}
 @keyframes discosway{from{rotate:-7deg}to{rotate:7deg}}
 .tier-c .st-disco{animation:none}
@@ -474,8 +472,8 @@ body.in-haldi #bg{background:#FBF3DF!important}
   border:1px dashed rgba(184,134,43,.5);pointer-events:none;z-index:2}
 .gal-item.is-active .gal-card{transform:translateY(-5px);box-shadow:0 18px 44px rgba(63,32,8,.28)}
 .gal-win{position:relative;width:100%;aspect-ratio:3/4;border-radius:160px 160px 11px 11px;overflow:hidden;background:var(--cream-3)}
-.gal-win img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 30%);transform:scale(1.05);transition:transform .9s cubic-bezier(.2,.7,.3,1)}
-.gal-item.is-active .gal-win img{transform:scale(1)}
+.gal-win img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 30%);transform-origin:var(--pos,50% 30%);transform:scale(calc(var(--z,1) * 1.05));transition:transform .9s cubic-bezier(.2,.7,.3,1)}
+.gal-item.is-active .gal-win img{transform:scale(var(--z,1))}
 .gal-win img.fu{opacity:0;transition:opacity .5s ease,transform .9s cubic-bezier(.2,.7,.3,1)}
 .gal-win img.fu.on{opacity:1}
 .cov-cap{display:block;text-align:center;font:500 italic clamp(17px,4.4vw,21px)/1.4 var(--serif);color:var(--ink-2);min-height:1.4em;margin-top:16px}
@@ -632,8 +630,8 @@ body.in-haldi #bg{background:#FBF3DF!important}
 #lb.on{display:flex;animation:cdtick .4s ease}
 .lb-box{position:relative;max-width:min(92vw,560px);width:100%}
 .lb-frame{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/3.9;background:#EFE2C4;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-.lb-frame .im{position:absolute;inset:0;object-fit:cover;object-position:var(--pos,50% 30%);width:100%;height:100%}
-.lb-frame .im.th{filter:blur(10px) saturate(1.15);transform:scale(1.04)}
+.lb-frame .im{position:absolute;inset:0;object-fit:cover;object-position:var(--pos,50% 30%);transform-origin:var(--pos,50% 30%);transform:scale(var(--z,1));width:100%;height:100%}
+.lb-frame .im.th{filter:blur(10px) saturate(1.15);transform:scale(calc(var(--z,1) * 1.04))}
 .lb-frame .im.fu{opacity:0;transition:opacity .4s ease}
 .lb-frame .im.fu.on{opacity:1}
 .lb-cap{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#F3E4C2}
@@ -659,6 +657,54 @@ body.in-haldi #bg{background:#FBF3DF!important}
   transition:opacity .3s,transform .3s}
 #toTop.show{opacity:.9;transform:none}
 #toTop svg{width:22px;height:22px}
+
+/* ==================================================================
+   V25 — Ganesha & monogram embeds · plaque grandparents · RSVP picks
+   ================================================================== */
+/* gate: Ganesha revealed inside the doorway as the doors swing open */
+.gb-ganesh{position:absolute;left:50%;top:42%;width:78%;aspect-ratio:1;
+  transform:translate(-50%,-50%) scale(.88);opacity:0;pointer-events:none;
+  transition:opacity 1.2s ease .5s,transform 1.8s cubic-bezier(.2,.7,.3,1) .5s;
+  filter:drop-shadow(0 0 26px rgba(245,215,127,.6)) drop-shadow(0 6px 18px rgba(40,16,2,.5))}
+.gb-ganesh img{width:100%;height:100%;display:block}
+#gate.opening .gb-ganesh,#gate.entered .gb-ganesh{opacity:.95;transform:translate(-50%,-50%) scale(1)}
+.tier-c .gb-ganesh{transition:opacity .8s ease;transform:translate(-50%,-50%)}
+.tier-c #gate.opening .gb-ganesh{transform:translate(-50%,-50%)}
+/* hero: the blessing mandala crowns the text block and fades with it —
+   the text sits below it; the MB monogram rides the palace facade centre.
+   both carry a soft dark halo so they read as engraved medallions */
+.hganesh{position:relative;width:clamp(92px,20vw,142px);margin:0 auto 10px;pointer-events:none}
+.hganesh::before{content:'';position:absolute;inset:-16% -14% -8%;border-radius:50%;z-index:0;
+  background:radial-gradient(circle,rgba(50,17,4,.55) 0%,rgba(50,17,4,.36) 46%,rgba(50,17,4,0) 72%)}
+.hganesh img{position:relative;z-index:1;width:100%;height:auto;display:block;
+  filter:drop-shadow(0 0 12px rgba(255,226,150,.45)) drop-shadow(0 3px 9px rgba(30,10,2,.6))}
+.hlogo{position:absolute;left:50%;top:52%;width:clamp(94px,21vw,148px);transform:translate(-50%,-50%);
+  opacity:.97;pointer-events:none}
+.hlogo::before{content:'';position:absolute;inset:-20%;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,16,4,.55) 0%,rgba(46,16,4,.34) 46%,rgba(46,16,4,0) 72%)}
+.hlogo img{position:relative;width:100%;height:auto;display:block;
+  filter:drop-shadow(0 8px 20px rgba(40,16,2,.6)) drop-shadow(0 0 16px rgba(245,215,127,.42))}
+/* nav brand = the MB monogram */
+nav#nav .bar{gap:8px}
+nav#nav .brand{display:flex;align-items:center;padding:0 4px}
+nav#nav .brand img{display:block;height:30px;width:30px;border-radius:50%;
+  box-shadow:0 0 0 1.4px rgba(233,194,88,.55),0 2px 8px rgba(0,0,0,.35)}
+/* scratch card: the monogram sits above the revealed date, never behind it */
+.sc-logo{width:clamp(54px,13vw,82px);height:auto;flex:0 0 auto;opacity:.96;pointer-events:none;
+  filter:drop-shadow(0 4px 10px rgba(63,32,8,.22))}
+/* couple plaques: grandparents line above the parents line */
+.cp-plaque .gp{font:500 italic 13.5px/1.6 var(--serif);color:var(--ink-3);margin:10px auto 0;max-width:26em}
+.cp-plaque .pr{margin-top:5px}
+.cp-cap{text-align:center}
+.cp-cap .script{transform:none}
+/* RSVP: selects ride inside .fld, side chips reuse .tg */
+.fld select{flex:1;min-width:0;border:0;background:transparent;padding:12px 26px 12px 2px;
+  font:500 16px/1.5 var(--sans);color:#33200F;appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8862B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 4px center;background-size:15px}
+.fld select:focus{outline:none}
+.fld select:required:invalid{color:#8A6A45}
+.tg.warn{border-color:#E2695C;box-shadow:0 0 0 2px rgba(226,105,92,.28)}
 </style>
 </head>
 <body class="parch">
@@ -812,7 +858,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
 
 <nav id="nav" aria-label="Main">
   <div class="bar">
-    <span class="brand">M&amp;B</span>
+    <span class="brand"><img src="images/logo-mark.webp" alt="M and B monogram"></span>
     <div class="links" id="navLinks">
       <a class="l" href="#hero">Home</a>
       <a class="l" href="#couple">Couple</a>
@@ -835,6 +881,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
     <div class="gdoorbox" id="gdoorbox" aria-hidden="true">
       <div class="gbehind">
         <div class="gb-pal"></div>
+        <div class="gb-ganesh" aria-hidden="true"><img src="images/ganesha-mark.webp" alt="" decoding="async"></div>
         <div class="gb-shade"></div>
         <div class="gb-glow"></div>
       </div>
@@ -859,11 +906,13 @@ body.in-haldi #bg{background:#FBF3DF!important}
 <!-- ============ 2 · HERO — palace sunset arch zoom ============ -->
 <div id="hero" data-bg="#FBE8D0">
   <div class="hstage" id="hstage">
-    <div class="hpal" id="hpal" role="img" aria-label="A pink sandstone palace at sunset with an open archway at its base"></div>
+    <div class="hpal" id="hpal" role="img" aria-label="A pink sandstone palace at sunset with an open archway at its base">
+      <div class="hlogo" aria-hidden="true"><img src="images/logo-mark.webp" alt="" decoding="async"></div>
+    </div>
     <div class="hsky" id="hsky">
+      <div class="hganesh" aria-hidden="true"><img src="images/ganesha-mark.webp" alt="" decoding="async"></div>
       <div class="hscript">Shubh Vivah</div>
       <h2 class="hnames">MUKUND &amp; BHAVANA</h2>
-      <div class="hdate">SUNDAY &amp; MONDAY&nbsp;·&nbsp;17–18 JANUARY 2027</div>
       <span class="hhash">#MukundKiBhavana</span>
     </div>
     <div class="hcue" id="hcue" aria-hidden="true">
@@ -893,7 +942,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
     </div>
     <div class="io" style="text-align:center;margin-top:34px">
       <span class="script lg">Counting the moments</span>
-      <div class="cd" id="countdown" role="timer" aria-label="Counting down to 17 January 2027, 11:00 am IST">
+      <div class="cd" id="countdown" role="timer" aria-label="Counting down to 18 January 2027, 7:00 pm IST">
         <div class="cd-u u-d"><div class="cd-arch"><span class="cd-n" id="cd-d">—</span></div><span class="cd-l"><i>•</i> DAYS <i>•</i></span></div>
         <div class="cd-u u-h"><div class="cd-arch"><span class="cd-n" id="cd-h">—</span></div><span class="cd-l"><i>•</i> HOURS <i>•</i></span></div>
         <div class="cd-u u-m"><div class="cd-arch"><span class="cd-n" id="cd-m">—</span></div><span class="cd-l"><i>•</i> MINUTES <i>•</i></span></div>
@@ -906,10 +955,11 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ss">Scratch the card below to reveal</div>
       <div class="sc-area" id="scArea">
         <div class="sc-under" id="scUnder">
+          <img class="sc-logo" src="images/logo-full.webp" alt="" aria-hidden="true" decoding="async">
           <div class="m1">We're Getting Married!</div>
-          <div class="m2">17 &amp; 18 January 2027</div>
-          <div class="m3">Sunday and Monday</div>
-          <div class="m4">Save these dates and join us in celebration</div>
+          <div class="m2">18 JANUARY 2027</div>
+          <div class="m3">Monday</div>
+          <div class="m4">Save this date and join us in celebration</div>
         </div>
         <canvas class="sc-canvas" id="scCanvas" aria-label="Scratch card. Use the Tap to reveal button below."></canvas>
       </div>
@@ -943,11 +993,13 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="cp-plaque io" id="cpGroom">
         <span class="cr">The Groom</span>
         <div class="nm">MUKUND TOSHNIWAL</div>
+        <p class="gp" id="cpGroomGrand" hidden></p>
         <p class="pr" id="cpGroomParents" hidden></p>
       </div>
       <div class="cp-plaque io" id="cpBride">
         <span class="cr">The Bride</span>
         <div class="nm">BHAVANA RATHI</div>
+        <p class="gp" id="cpBrideGrand" hidden></p>
         <p class="pr" id="cpBrideParents" hidden></p>
       </div>
     </div>
@@ -975,14 +1027,14 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ev-row" data-ev="0">
         <div class="ev-date io">
           <div class="ed1">17th January</div>
-          <div class="ed2">Day One · 11:00 am onwards</div>
+          <div class="ed2">Day One · 12:00 pm onwards</div>
         </div>
         <div>
           <article class="ev-card sk-battisi">
             <div class="cloth">
               <div class="ev-eyebrow">EVENT 1</div>
               <h3 class="ev-name">BATTISI</h3>
-              <div class="ev-theme" lang="hi">बत्तीस</div>
+              <div class="ev-theme" lang="hi">बत्तीसी</div>
               <p class="ev-desc">An auspicious beginning, wrapped in thirty-two blessings.</p>
               <div class="ev-stage" id="battisiStage" aria-hidden="true">
                 <svg class="st-thali" viewBox="0 0 120 110" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
@@ -995,7 +1047,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
               </div>
               <ul class="ev-rows">
                 <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>17 JAN 2027</li>
-                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>11:00 AM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>12:00 PM</li>
                 <li><svg aria-hidden="true"><use href="#i-pin"/></svg>UTSAV · JAIPUR</li>
               </ul>
               <div class="ev-actions"><button class="ics-btn" type="button" data-ics><svg aria-hidden="true"><use href="#i-calendar"/></svg>Add to calendar</button></div>
@@ -1007,7 +1059,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ev-row alt" data-ev="1">
         <div class="ev-date io">
           <div class="ed1">17th January</div>
-          <div class="ed2">Day One · 12:30 pm onwards</div>
+          <div class="ed2">Day One · 1:00 pm onwards</div>
         </div>
         <div>
           <article class="ev-card sk-myrah">
@@ -1035,7 +1087,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
               </div>
               <ul class="ev-rows">
                 <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>17 JAN 2027</li>
-                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>12:30 PM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>1:00 PM</li>
                 <li><svg aria-hidden="true"><use href="#i-pin"/></svg>UTSAV · JAIPUR</li>
               </ul>
               <div class="ev-actions"><button class="ics-btn" type="button" data-ics><svg aria-hidden="true"><use href="#i-calendar"/></svg>Add to calendar</button></div>
@@ -1047,7 +1099,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ev-row" data-ev="2" data-zone="in-sangeet">
         <div class="ev-date io">
           <div class="ed1">17th January</div>
-          <div class="ed2">Day One · 7:30 pm onwards</div>
+          <div class="ed2">Day One · 7:00 pm onwards</div>
         </div>
         <div>
           <article class="ev-card sk-sangeet">
@@ -1077,7 +1129,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
               <p class="ev-note">Jaipur evenings are cool in January — bring a shawl for the night.</p>
               <ul class="ev-rows">
                 <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>17 JAN 2027</li>
-                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>7:30 PM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>7:00 PM</li>
                 <li><svg aria-hidden="true"><use href="#i-pin"/></svg>UTSAV · JAIPUR</li>
               </ul>
               <div class="ev-actions"><button class="ics-btn" type="button" data-ics><svg aria-hidden="true"><use href="#i-calendar"/></svg>Add to calendar</button></div>
@@ -1139,7 +1191,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ev-row alt" data-ev="4">
         <div class="ev-date io">
           <div class="ed1">18th January</div>
-          <div class="ed2">Day Two · 5:30 pm onwards</div>
+          <div class="ed2">Day Two · 4:30 pm onwards</div>
         </div>
         <div>
           <article class="ev-card sk-baraat">
@@ -1147,7 +1199,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
               <div class="ev-eyebrow">EVENT 5</div>
               <h3 class="ev-name">BARAAT &amp; VARMALA</h3>
               <div class="ev-theme" lang="hi">बरात और वरमाला</div>
-              <p class="ev-desc">The groom arrives in a procession; garlands are exchanged.</p>
+              <p class="ev-desc">The baraat sets out in procession at 4:30; the varmala garlands are exchanged at 5:30.</p>
               <div class="ev-stage" aria-hidden="true">
                 <svg class="st-varmala" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="85" cy="70" r="47" stroke="#B8862B" stroke-width="1.6" stroke-dasharray="3 4"/>
@@ -1188,7 +1240,8 @@ body.in-haldi #bg{background:#FBF3DF!important}
               </div>
               <ul class="ev-rows">
                 <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>18 JAN 2027</li>
-                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>5:30 PM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>BARAAT NIKASI · 4:30 PM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>VARMALA · 5:30 PM</li>
                 <li><svg aria-hidden="true"><use href="#i-pin"/></svg>UTSAV · JAIPUR</li>
               </ul>
               <div class="ev-actions"><button class="ics-btn" type="button" data-ics><svg aria-hidden="true"><use href="#i-calendar"/></svg>Add to calendar</button></div>
@@ -1200,7 +1253,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="ev-row" data-ev="5">
         <div class="ev-date io">
           <div class="ed1">18th January</div>
-          <div class="ed2">Day Two · 9:00 pm onwards</div>
+          <div class="ed2">Day Two · 8:00 pm onwards</div>
         </div>
         <div>
           <article class="ev-card sk-reception">
@@ -1212,7 +1265,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
               <div class="ev-stage stage-reception" id="receptionStage" aria-hidden="true"></div>
               <ul class="ev-rows">
                 <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>18 JAN 2027</li>
-                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>9:00 PM</li>
+                <li><svg aria-hidden="true"><use href="#i-clock"/></svg>8:00 PM</li>
                 <li><svg aria-hidden="true"><use href="#i-pin"/></svg>UTSAV · JAIPUR</li>
               </ul>
               <div class="ev-actions"><button class="ics-btn" type="button" data-ics><svg aria-hidden="true"><use href="#i-calendar"/></svg>Add to calendar</button></div>
@@ -1324,11 +1377,13 @@ body.in-haldi #bg{background:#FBF3DF!important}
             <radialGradient id="waxGold" cx="35%" cy="30%" r="70%">
               <stop offset="0%" stop-color="#FFF3B0"/><stop offset="45%" stop-color="#D4AF37"/><stop offset="85%" stop-color="#9A7117"/><stop offset="100%" stop-color="#5C4008"/>
             </radialGradient>
+            <clipPath id="sealClip"><circle cx="50" cy="50" r="28.5"/></clipPath>
           </defs>
           <circle cx="50" cy="50" r="44" fill="url(#waxGold)" stroke="#F7E5A9" stroke-width="1.5"/>
           <circle cx="50" cy="50" r="37" stroke="#5C4008" stroke-width="1.5" stroke-dasharray="3 2"/>
-          <circle cx="50" cy="50" r="32" fill="#8B6514" fill-opacity="0.35" stroke="#FFF3B0" stroke-width="1"/>
-          <text x="50" y="57" text-anchor="middle" fill="#FFF8DC" font-family="Cinzel Decorative, serif" font-size="19" font-weight="700" letter-spacing="1">M&amp;B</text>
+          <circle cx="50" cy="50" r="30" fill="#FBF3E4"/>
+          <image href="images/logo-mark.webp" x="20" y="20" width="60" height="60" preserveAspectRatio="xMidYMid slice" clip-path="url(#sealClip)"/>
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#8B6514" stroke-width="1.2"/>
         </svg>
       </div>
       <div class="rsvp-lead">We await your presence</div>
@@ -1336,6 +1391,10 @@ body.in-haldi #bg{background:#FBF3DF!important}
         <div class="tg-row" role="group" aria-label="Will you attend?">
           <button class="tg" id="tgYes" type="button" aria-pressed="true"><svg aria-hidden="true"><use href="#i-spark"/></svg>JOYFULLY ACCEPT</button>
           <button class="tg" id="tgNo" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#i-x"/></svg>REGRETFULLY DECLINE</button>
+        </div>
+        <div class="tg-row" role="group" aria-label="Which side of the family?">
+          <button class="tg" id="tgBride" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#i-heart"/></svg>BRIDE SIDE</button>
+          <button class="tg" id="tgGroom" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#i-spark"/></svg>GROOM SIDE</button>
         </div>
         <label class="fld" id="fName">
           <svg aria-hidden="true"><use href="#i-user"/></svg>
@@ -1348,8 +1407,26 @@ body.in-haldi #bg{background:#FBF3DF!important}
           <span class="err" id="eGuests">Between 1 and 8 guests, please.</span>
         </label>
         <label class="fld">
-          <svg aria-hidden="true"><use href="#i-note"/></svg>
-          <textarea id="rsvpNotes" name="notes" rows="3" maxlength="300" placeholder="Dietary Preferences / Special Notes"></textarea>
+          <svg aria-hidden="true"><use href="#i-calendar"/></svg>
+          <select id="rsvpWhen" required aria-describedby="eWhen">
+            <option value="" selected disabled>When are you coming?</option>
+            <option>17 January — Battisi, Myrah &amp; Sangeet</option>
+            <option>18 January — Haldi, Baraat &amp; Reception</option>
+            <option>Both days</option>
+          </select>
+          <span class="err" id="eWhen">Please pick the day(s) you will join.</span>
+        </label>
+        <label class="fld">
+          <svg aria-hidden="true"><use href="#i-plane"/></svg>
+          <select id="rsvpHow" required aria-describedby="eHow">
+            <option value="" selected disabled>How are you coming?</option>
+            <option>Car / Taxi</option>
+            <option>Train</option>
+            <option>Flight</option>
+            <option>Bus</option>
+            <option>Other / Not sure yet</option>
+          </select>
+          <span class="err" id="eHow">Please pick your mode of travel.</span>
         </label>
         <input class="hpfield" id="rsvpHp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button class="btn btn-gold rsvp-send" id="rsvpSend" type="submit">SEND RSVP</button>
@@ -1415,7 +1492,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
       <div class="wa-compact">
         <div class="t">Questions about the days?</div>
         <a id="waClose" href="https://wa.me/qr/TZLIVY52WWJ3K1" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Surendra Kumar Rathi · WhatsApp</a>
-        <a class="phone" href="tel:+919886539444"><svg aria-hidden="true"><use href="#i-phone"/></svg>Vasudev Toshniwal · +91 98865 39444</a>
+        <a id="waVasudev" href="https://wa.me/qr/CL4UMZZZ4FKRA1" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Vasudev Toshniwal · WhatsApp</a>
       </div>
     </div>
   </div>
@@ -1423,7 +1500,7 @@ body.in-haldi #bg{background:#FBF3DF!important}
     <img class="desert" data-src="images/desert.webp" alt="A Thar desert caravan at sunset — mud huts, camels and dunes">
   </div>
   <p class="credit"><span class="hi" lang="hi">पधारो</span> · <b>#MukundKiBhavana</b></p>
-  <p class="sig-mark">~ with love, Mukund</p>
+  <p class="sig-mark">~ with love Mukund (The other one)</p>
 </section>
 </main>
 
@@ -1448,9 +1525,11 @@ body.in-haldi #bg{background:#FBF3DF!important}
    Empty strings keep their UI hidden until filled (no fake data).
    ================================================================== */
 const CONFIG = {
-  // people
-  GROOM:  { name: 'MUKUND',  parents: 'Saroj Toshniwal & Son of Vasudev Toshniwal' },
-  BRIDE:  { name: 'BHAVANA', parents: 'Daughter of Meena Rathi & Surendra Kumar Rathi' },
+  // people — grandparents sit above the parents line on the plaques
+  GROOM:  { name: 'MUKUND',  grand: 'Grandson of Mohini Devi & Late Ganesh Mal ji Toshniwal',
+                      parents: 'Son of Saroj & Vasudev Toshniwal' },
+  BRIDE:  { name: 'BHAVANA', grand: 'Granddaughter of Late Sona Devi & Late Kanhaiya Lal ji Rathi',
+                      parents: 'Daughter of Meena & Surendra Kumar Rathi' },
   MUSIC_SRC: 'audio/mangal-rang.mp3',  // "Mangal Rang" — begins once the doors stand open; toggle hidden while empty
   PHOTO_GALLERY_URL: '',    // Memories QR target (Kamero / PicsDrop …). Hidden while empty.
   HASHTAG: '#MukundKiBhavana',
@@ -1460,34 +1539,38 @@ const CONFIG = {
   RSVP_ENDPOINT: 'https://script.google.com/macros/s/AKfycbzCk7ABa3csSp3YTLoBVgIhZWK4zGe5ZBX4iI8xN0B-NnPMyNOaJ9YfPifcTnm4fq0I/exec',
   WISHES_ENDPOINT: '',
   WHATSAPP_URL: 'https://wa.me/qr/TZLIVY52WWJ3K1',   // Surendra Kumar Rathi
+  WHATSAPP_URL_2: 'https://wa.me/qr/CL4UMZZZ4FKRA1',  // Vasudev Toshniwal
   PHONE_TEL:   'tel:+919886539444',                  // Vasudev Toshniwal
   MAPS_URL: 'https://www.google.com/maps/search/?api=1&query=Utsav%2C%20197%2C%20Sector%202%20Rd%2C%20Sector%202%2C%20Vijay%20Bari%2C%20Vidyadhar%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302039',
 };
 const COLOURS = {
-  sangeet: [['Midnight Black','#0B0B12'],['Liquid Gold','#D4AF37'],['Deep Emerald','#0F5C46'],['Velvet Crimson','#7A0F26']],
+  sangeet: [['Sterling Silver','#C6CBD5'],['Antique Bronze','#A5713C'],['Liquid Gold','#D4AF37'],['Emerald Green','#1E8A5E']],
   haldi:   [['Lavender','#C9B6E8'],['Peach Blush','#F8C9B4'],['Mint Green','#BFE5D0'],['Creamy Yellow','#FBEFB5']],
 };
 const EVENTS = [
-  { n:1, name:'Battisi',            iso:'20270117T110000', time:'11:00 am' },
-  { n:2, name:'Myrah',              iso:'20270117T123000', time:'12:30 pm' },
-  { n:3, name:'Sangeet Saga',       iso:'20270117T193000', time:'7:30 pm' },
+  { n:1, name:'Battisi',            iso:'20270117T120000', time:'12:00 pm' },
+  { n:2, name:'Myrah',              iso:'20270117T130000', time:'1:00 pm' },
+  { n:3, name:'Sangeet Saga',       iso:'20270117T190000', time:'7:00 pm' },
   { n:4, name:'Phoolon wali Haldi', iso:'20270118T103000', time:'10:30 am' },
-  { n:5, name:'Baraat and Varmala', iso:'20270118T173000', time:'5:30 pm' },
-  { n:6, name:'Reception',          iso:'20270118T210000', time:'9:00 pm' },
+  { n:5, name:'Baraat Nikasi & Varmala', iso:'20270118T163000', time:'4:30 pm',
+    parts:[{ name:'Baraat Nikasi', iso:'20270118T163000', time:'4:30 pm' },
+           { name:'Varmala',       iso:'20270118T173000', time:'5:30 pm' }] },
+  { n:6, name:'Reception',          iso:'20270118T200000', time:'8:00 pm' },
 ];
-const WEDDING_MS = Date.parse('2027-01-17T11:00:00+05:30');
+const WEDDING_MS = Date.parse('2027-01-18T19:00:00+05:30');
 /* Photos — src = full file, thumb = tiny inline base64 (loads even when
    only index.html is previewed), pos keeps faces framed, cap = caption. */
 const PHOTOS = [
-  { f:'photo-01', pos:'50% 25%', alt:'Bhavana and Mukund at an art gallery, a bright abstract painting behind them', cap:'Jab we met',    thumb:'data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAAAwCwCdASokADAAPq1GnkmmI6MhMdmaAMAViWwAgspJ5Va8vuyDecq67r8rc5btVZ5voQqGkhR2fGc1HyNoskhoT2vV/LnYFpRUQ6QvlxtR+uI8Hdttc/aJL1c8B/Vd03nVAAD+9jRhIK6zctbNdbQOr4S4HLrvPmGs+X3Kz+7BKKOXYjth2cIf//ZvWIZo/utovgJ9O3LgQxmlKwGtNJBh//6Y63Yyny+kGAm7MGUaQBxFZDj3l05ztL0D7sdfcPcGVBtQjR+nuNYrVFJfNoKCssnP8sW+RTmd0DTg6giD4ixXQfw7HGYRYxuYRBhTa2sySxGThO2GZMsk/JnBXHjyuRtv2uOEq/nYmh6qIsQ7194X5deDk0SNnn9kDLvXOnvsrIXYiXp4fBDjgZtTsbtjbjeEVmXcfyCBdCnWCLY/y2FbYvrD15n1W6OvwdAgsMAoUo54sSqY2BMt/u2CX/tU2oKevyvZxVXLasQFwCmq2JlaJWxmAor5AnLBxLcCWBTubGY5ekbvqjf6rou4EYhduIqmWCXt4afZ4d6P2pU8RyfuzXZ9JcAAnRyvW2mObtLBAdi88PAOWoIINm9MU8M98VPck4g0RZZ75KxN7us18xKIMA3lqE5JQqfOf58zCrf0fjLyY7PZj5/h6cJRmdz/ymeKsRa+R7YFnLteMSZpr9B0M5AAAA==' },
-  { f:'photo-02', pos:'50% 25%', alt:'A lunch-date selfie — Bhavana and Mukund smiling at a cafeteria table',        cap:'Coffee, Conversations & Us',      thumb:'data:image/webp;base64,UklGRpwBAABXRUJQVlA4IJABAACwBwCdASocACYAPslYpkwnpSOiKrgMAPAZCUATpl4OhoPudNNB4AVSoO7bJ2KNEDZfQ8RQhJxvvExl453Whpwx8T12Ch0AAP6UK0Bn0hiJTiTo9egB3mZxh5/lmuevzgMR+bxG1mKV1EwW5/Nks23r70m5Drv/E6gSXnIQfb2fOgMwcN/ftArkPDmrsxUvC8SAambgoHz4oJp+8G4KHyAuNMSETFP2s2+yRaUINcAlhHzD1Obh3/LTnKJPFQ/HHbNzw+UJTBjmWYbpVECtz93kUQeVpZoFH7AY2BPnIHS2lP7GJwvQPWpPSAQWS5vihHsnfpwNXvJAdq3V3ZXN+BO/kxn4w974gNGQTq4Nf95LUjtMOGHvYFfSsnxHt24Hk5qdmEKxTeCIJu5zT+R/tPDKo/YZoFSUWKgo9/Vzo8EoD+kwAdEzgdzdMxGQobpR1DtS+LoIQ1SqXWoI0gkthZh9de0C8bdRoHCYLUAlJY41Iabx9jeQObOe5m2DWXPz4/hcK3g0CQt03in2fSvlrgAA' },
-  { f:'photo-03', pos:'50% 28%', alt:'Bhavana and Mukund by a warm wooden wall under a bicycle-wheel chandelier',    cap:'In Sync, In Love',    thumb:'data:image/webp;base64,UklGRrwBAABXRUJQVlA4ILABAADQCQCdASokADAAPrFKn0qnJCKhrjgJmOAWCUAXZnE48g/5nLHipESAaVmXDkoTV4a8ok5X0qJtI36wVidoluWy4gBR9TZjHqLSOn092wyw6XfrwtsZ6gAA/vREghrerZcP73AMzDZqz/t4GUCneFQEmSrL/JRFwt9ACbFKzTBFjjSQ7HLbIWfyOyeikUfzNcNOs9blOSkdefwjhBiO2VssomrcwBjP1MWwkJzTM6oq8QYEaGNdnUBqKjmYUhkTCmjz+kXxM9C9SXI5BwCPd6CTplXmE05bLHwg8vuR7EcWu8aRtfJe2r5B0CTXNsHtwRZe9nTDrr5XJCn8VqiHPlBb263lTMr7XZs76T3iVL6YD4e0MSarHlDox1AHwk8w7HLA8FKcqJqEa5M3x931tgbHMi+H6/jMzr6Z++27KBtksTjSLyGEZDOFE+g3ODlVibmb9K2IZgDL9BJBnIf50Cd+b5ja7V1UHaobRUNSAoUD21AhkFwgNwY7GXdaJ3RFj+QpncYmX7CUwnjRGsDdtJrcb3QKvZO0fZcPrLE+he3PRuh0ao5GDfv8n3VIJmxGgAA=' },
-  { f:'photo-05', pos:'50% 22%', alt:'The engagement — holding a rose bouquet, tilak on their foreheads',            cap:'A Promise for a Lifetime',        thumb:'data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAACwCgCdASokADAAPrFGm0onI6IhsdM9+OAWCWgAvgOpvqGI0CsAsqU1pogZPlxeGelFlZ41RkyD0aLCKeyTIsMwfZXyQhbn8uPsE26ZeNqPAyePRyTkHNPPIFYIAKAAAP73D8GiiJQmNQGuN07ggVEju06d00kPzX5X6ZSTzn16i3G6rrr5u2myAoKWlP/C8OpuwvTO60Ul7CQLeqhm63sWGZpLT46qRw/PD0eGAcSRRae3WOSybBfHM4Ci1a2wOm+Av5w3Y2nLtZn3kHc9/DEV37FCV+VVKnYn3TdaiFJWjd+jFU5wJDIRN/Sqmm+AIa/JRlw1SNVYx1XpUQyJ9pXn/RdjIdvkFMG/aVkzimzuNpBTTKKrXDOQGBFoJIh+Z1i6TiTEb7n3er5ySdLjip+KEguqG/IYgYdjoh+Gb2fDHjDfxRKe6fAZf5SiPhpjQRYSOnLmQMcF5gptIQikiG+A8xJ8k6b+4KHGeqF+uu9EmFwowNKYTTpcmgFfTHOSaFdYpZKSoVQ+VZl03nph0He5qIeIcmFH/JP5G+A4yOKm5jW8Z0Y052eEZ8doAw2t1/PCPkbffi8yItrS2XuFmRUfdAwuzeLGIsLFE8dBjhCupaCf/PT6ichgDqqu9DnN4NtjPKfukKCFMM+2gQxahZplC5qj474mmZWev6K7By76E0WowAAAAA==' },
-  { f:'photo-04', pos:'50% 30%', alt:'On a cafe bench, holding hands against a brick wall',                          cap:'Peace in Your Presence',         thumb:'data:image/webp;base64,UklGRoYBAABXRUJQVlA4IHoBAAAwCQCdASokADAAPrFMoE0nI6MiJzgKSOAWCWcAyrm3Ef2jkL/3HdseKYYy+bjwI8SRcoPZopYxUBdQ8fzNI3gpzEuqe0+hQYdWDL/u2y3TD7vAAP79fNGEeOLQJC4dDfhEJgnF9xXOtLMHx9sQL1yWWv3B5x2VbE/r7/c8cSIQsHcT8jh4cqzj1e2hwa6Am+RJyiCblrfRXJzXkbEj4raNtyGm/JojLoXQjbcEwYQJ8bMi5gwNljliFMOxHV47mbSDEIuvpLH5RGrZEdPu5u2pDVbTv8xe6RdJry/Ck+CR3bWgTU5pw5xFPkR1tSciHo4kt13gsn8n9QuLtGOnW3kpscjRgpwuv9EKQzZs6AFuYRuf6AcFDGMb0LPz4/EGquGv/NLXT43c407TYxyaHyRHgNEcTeyb/3vvjOuzmuzB7CkSNIzPiK0AA74c2jasCmlUkvsxkbVtcVXT7Lu49cr8RSj7Hgj83b7kr+T3UljdGI4eEwyAArMgAAA=' },
-  { f:'photo-09', pos:'50% 28%', alt:'On a marigold swing — Bhavana in a yellow saree, Mukund behind in a lilac kurta', cap:'Our first Teej (before shaadi, cus why not)', thumb:'data:image/webp;base64,UklGRsQBAABXRUJQVlA4ILgBAAAQCgCdASocACYAPslSpE2npCMiKrgMAPAZCWwAnTmN1ToklPUMDBjtSA9B3pcF+lt9sR2pMreb3oX/ccN/s6hExTMDuAk8iF14fw1Z7d8eVIsXYR1EEyX5gAD+4kR7N5PnY84DWg4jzzLXSosm+2/kbmI8YNlsoQxsErdDCGfoGYrr+CytaGXw0c7LTyd9Qj9vdx4/54azBSQ77AHcFI60fU8d/WLMC/1tk7R9sTT5o3UtPz0S/jfMZBHi6aih9o1KlorS1k3VBZNOxLbL5GQZNcHUi9LT/QWH0ZvEKzrOU6Px0a6rrObIqqt70dWlK4Qpcq/jkZe8wRk5OHxbut112kMYu44GM4Y/5szSEdgipZ/3eMSceTYwMCmRoBlZOLri0H+90ybfHDZx7GYukJz4wa283Dz9xHufnOd9GmBtNX7yo5T1GrO46WeWrLWwVbRG3EJr7PfYB7LgdGdrvpxk/TulwVfVVELy56ESbRh7vZRTLGiroG819DJV/JzWo+mYj7RKHvUhyWJWyqAlPVx0lV7E/vKF2XWmA3V3SuKbMZEwXcDdnxoO6Qs3G7F8idqabWd8WVAAAA==' },
-  { f:'photo-06', pos:'50% 26%', alt:'A festive selfie in traditional finery — pearls, tilak and a sequinned kurta', cap:'Blessed & Bound Together',             thumb:'data:image/webp;base64,UklGRqgBAABXRUJQVlA4IJwBAADwCQCdASokADAAPrFQoUsnJSMhpzgMkOAWCUAWo3tRAklfVKVWWpCkri8X/SbG6RWjxBaU4PPjQdtn1xFubSnA3cHDNZauvv4gSbHFqgZ4rGD+fXOnrELgAP73yVRDL9F4CESPTWj5H3on268k7NHjgTrLO/WN8wMfQhpFjVJEkRwu8mAxrl1mPlbm0MPz7jfX33I5N52vDNauqf3fzrgx+Kpc2edzmZI5jPsXR7BXA1o0Uhd3dOvg/Fy6D7MzgqRx8UPtVtnNj06sRfGGfhibeXurYDdviWQJfCozj9fM6nIhG4qgRqKV4dfJQjcEX938EWfTTC8xc8y29yROOKdRC0XPa998OmwvAptgU8ct6VZuW0zkMzZO84L9A8+W6DTp2Ne/lud/X8JghAr4Wbg/Fcvh/Wnz/ViQrfVfOMzMsVHEhnkzLBv0/0AI9D8ogeN5skPXFckoCCebgemanSU8jji8ZV58TAtO7Lna1skCIwRhUceK9ySpMl+dX1BPDmPj/eWL+P2HUAQGNqnNpxwWhuOq8KTTjgr628AA' },
-  { f:'photo-08', pos:'50% 42%', alt:'At the lake — Bhavana reaches for Mukund\u2019s cheek, the water shining behind', cap:'Chasing Horizons Together',         thumb:'data:image/webp;base64,UklGRg4CAABXRUJQVlA4IAICAABwCgCdASokADAAPrFMm0onJKIhrjgLMOAWCWMApLNwv6K0a3asTv5l0A0bSw/H8CQpDEOtXe+ymSBNOkp72tW8S5VD3zLLEP06jbSqBFlTebcgzjlDsdb+HrxKAADHZUMakpFegvG7oH22WlaNwz83Lt4pBt2EGk2EJyhx4jzdBjr9nNWcVUjcEYPaClWkCohDOTVIgtyAyYKGaVx7eXg7eM/3fVtLEmLRQwKHePkd9zQ9ChfgLZvMm3DWvLl0THF/RTDomERe+Ox+RBOAU8sJndMA0hIF0gz+57LJw1zY9vqoS43DbTiJUAFDAFRQP280KNSDNM6xjmCxjENLXF9qrKdnfjv+WoCNkLDfgR8+d8X9qPq320veIKrPgt9pnIa2RKllMlWV5mlzFswHSA4kFCdUJu2uo5h4RDx3ZjAmYrEFxzgLWrxkZK7lgdbqWk0PaGsAmrETThjW4RXPW75QBxAUpReA7JdreYo8Dr0ifrM0rBHf/pDKYO52imyaO9ux++nN0bZEtGM+PiB4CHDz/zt0HHpBVTy4+qLoZnybVdCPj0Z+WhsgqWvmYXMjLJUsARQ1UlxmasqKnAjaDtFj0qzWBRsSx5fuy/NZ19PmJKPTj/Sy1EKp6ubci1izM+gd31oc+AmrY38P54aJhOFw3kDg3Xclkx604hQYauj4AAAA' },
-  { f:'photo-10', pos:'50% 42%', alt:'On a rooftop at dusk, the moon rising behind them',                           cap:'Rooftop dusk',          thumb:'data:image/webp;base64,UklGRuABAABXRUJQVlA4INQBAACwCQCdASokADAAPrFOoEwnJCMlJyto4BYJQBjk7+CV+Y97J8+w393una4oJf2rPvco3uNFw+dHHQQDY3h19jxGIh02iKB91fFmD+uceoZpKDpif1a+AAD+++nDzBZx0wbjSywAFu7N/UnsTSM5Z/P+22tG6YtvkbxWw3vCkt+qzUP05Lxy+VbY8iT2SDjZqVMdCSIVIE+qpKlCsdJ/67RdDD0icAN5YXk1a3DqDvv9kJaTkGIU5yhYIlEqE8+P/S2RG+0l7jTIHAPHYs7pw5bLdQ0ex0TTFBMk0FTOS4NLRa6Yoobn1AFWibiM44JR5P1ZKvdXHk2C9avdAHCneZKWOqeMJe4muUcfkI/Tm+x2XR9Merm2E+zaZrjk4gPp+vkxQl9jDVEP2GOG8WeUqXzSj5pRyxGD5XOBOUiM5epmPtbWajcd5mauAJW2uOMH1YiiUDdcKDm3vUgeKdQEViTfZ5ZwZlh5+hUy0OJVSsLhihn0EtlyB9fkkr7qMn+TVBpEC2njx/u9VWRVhyhlzp60vULxxRGYRKafJaOweIqV59mnbiesLsX61yjf5IzqHAnstitaY79ggbswDlC49mQVspwgT9gEC4b7Y1piQVRZRiAAAAA=' },
+  { f:'photo-01', pos:'50% 25%', alt:'Bhavana and Mukund at an art gallery, a bright abstract painting behind them', cap:'Jab We Met',    thumb:'data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAAAwCwCdASokADAAPq1GnkmmI6MhMdmaAMAViWwAgspJ5Va8vuyDecq67r8rc5btVZ5voQqGkhR2fGc1HyNoskhoT2vV/LnYFpRUQ6QvlxtR+uI8Hdttc/aJL1c8B/Vd03nVAAD+9jRhIK6zctbNdbQOr4S4HLrvPmGs+X3Kz+7BKKOXYjth2cIf//ZvWIZo/utovgJ9O3LgQxmlKwGtNJBh//6Y63Yyny+kGAm7MGUaQBxFZDj3l05ztL0D7sdfcPcGVBtQjR+nuNYrVFJfNoKCssnP8sW+RTmd0DTg6giD4ixXQfw7HGYRYxuYRBhTa2sySxGThO2GZMsk/JnBXHjyuRtv2uOEq/nYmh6qIsQ7194X5deDk0SNnn9kDLvXOnvsrIXYiXp4fBDjgZtTsbtjbjeEVmXcfyCBdCnWCLY/y2FbYvrD15n1W6OvwdAgsMAoUo54sSqY2BMt/u2CX/tU2oKevyvZxVXLasQFwCmq2JlaJWxmAor5AnLBxLcCWBTubGY5ekbvqjf6rou4EYhduIqmWCXt4afZ4d6P2pU8RyfuzXZ9JcAAnRyvW2mObtLBAdi88PAOWoIINm9MU8M98VPck4g0RZZ75KxN7us18xKIMA3lqE5JQqfOf58zCrf0fjLyY7PZj5/h6cJRmdz/ymeKsRa+R7YFnLteMSZpr9B0M5AAAA==' },
+  { f:'photo-02', pos:'50% 25%', alt:'A lunch-date selfie — Bhavana and Mukund smiling at a cafeteria table',        cap:'Coffee, Conversations & Us', thumb:'data:image/webp;base64,UklGRpwBAABXRUJQVlA4IJABAACwBwCdASocACYAPslYpkwnpSOiKrgMAPAZCUATpl4OhoPudNNB4AVSoO7bJ2KNEDZfQ8RQhJxvvExl453Whpwx8T12Ch0AAP6UK0Bn0hiJTiTo9egB3mZxh5/lmuevzgMR+bxG1mKV1EwW5/Nks23r70m5Drv/E6gSXnIQfb2fOgMwcN/ftArkPDmrsxUvC8SAambgoHz4oJp+8G4KHyAuNMSETFP2s2+yRaUINcAlhHzD1Obh3/LTnKJPFQ/HHbNzw+UJTBjmWYbpVECtz93kUQeVpZoFH7AY2BPnIHS2lP7GJwvQPWpPSAQWS5vihHsnfpwNXvJAdq3V3ZXN+BO/kxn4w974gNGQTq4Nf95LUjtMOGHvYFfSsnxHt24Hk5qdmEKxTeCIJu5zT+R/tPDKo/YZoFSUWKgo9/Vzo8EoD+kwAdEzgdzdMxGQobpR1DtS+LoIQ1SqXWoI0gkthZh9de0C8bdRoHCYLUAlJY41Iabx9jeQObOe5m2DWXPz4/hcK3g0CQt03in2fSvlrgAA' },
+  { f:'photo-04', pos:'50% 64%', zoom:1.65, alt:'On a cafe bench, holding hands against a brick wall',                cap:'In Our Own Little World',    thumb:'data:image/webp;base64,UklGRoYBAABXRUJQVlA4IHoBAAAwCQCdASokADAAPrFMoE0nI6MiJzgKSOAWCWcAyrm3Ef2jkL/3HdseKYYy+bjwI8SRcoPZopYxUBdQ8fzNI3gpzEuqe0+hQYdWDL/u2y3TD7vAAP79fNGEeOLQJC4dDfhEJgnF9xXOtLMHx9sQL1yWWv3B5x2VbE/r7/c8cSIQsHcT8jh4cqzj1e2hwa6Am+RJyiCblrfRXJzXkbEj4raNtyGm/JojLoXQjbcEwYQJ8bMi5gwNljliFMOxHV47mbSDEIuvpLH5RGrZEdPu5u2pDVbTv8xe6RdJry/Ck+CR3bWgTU5pw5xFPkR1tSciHo4kt13gsn8n9QuLtGOnW3kpscjRgpwuv9EKQzZs6AFuYRuf6AcFDGMb0LPz4/EGquGv/NLXT43c407TYxyaHyRHgNEcTeyb/3vvjOuzmuzB7CkSNIzPiK0AA74c2jasCmlUkvsxkbVtcVXT7Lu49cr8RSj7Hgj83b7kr+T3UljdGI4eEwyAArMgAAA=' },
+  { f:'photo-06', pos:'50% 26%', alt:'A festive selfie in traditional finery — pearls, tilak and a sequinned kurta', cap:'Our Hearts, Blessed & Bound', thumb:'data:image/webp;base64,UklGRqgBAABXRUJQVlA4IJwBAADwCQCdASokADAAPrFQoUsnJSMhpzgMkOAWCUAWo3tRAklfVKVWWpCkri8X/SbG6RWjxBaU4PPjQdtn1xFubSnA3cHDNZauvv4gSbHFqgZ4rGD+fXOnrELgAP73yVRDL9F4CESPTWj5H3on268k7NHjgTrLO/WN8wMfQhpFjVJEkRwu8mAxrl1mPlbm0MPz7jfX33I5N52vDNauqf3fzrgx+Kpc2edzmZI5jPsXR7BXA1o0Uhd3dOvg/Fy6D7MzgqRx8UPtVtnNj06sRfGGfhibeXurYDdviWQJfCozj9fM6nIhG4qgRqKV4dfJQjcEX938EWfTTC8xc8y29yROOKdRC0XPa998OmwvAptgU8ct6VZuW0zkMzZO84L9A8+W6DTp2Ne/lud/X8JghAr4Wbg/Fcvh/Wnz/ViQrfVfOMzMsVHEhnkzLBv0/0AI9D8ogeN5skPXFckoCCebgemanSU8jji8ZV58TAtO7Lna1skCIwRhUceK9ySpMl+dX1BPDmPj/eWL+P2HUAQGNqnNpxwWhuOq8KTTjgr628AA' },
+  { f:'photo-08', pos:'50% 42%', alt:'At the lake — Bhavana reaches for Mukund\u2019s cheek, the water shining behind', cap:'Sun, Breeze & Your Smile',   thumb:'data:image/webp;base64,UklGRg4CAABXRUJQVlA4IAICAABwCgCdASokADAAPrFMm0onJKIhrjgLMOAWCWMApLNwv6K0a3asTv5l0A0bSw/H8CQpDEOtXe+ymSBNOkp72tW8S5VD3zLLEP06jbSqBFlTebcgzjlDsdb+HrxKAADHZUMakpFegvG7oH22WlaNwz83Lt4pBt2EGk2EJyhx4jzdBjr9nNWcVUjcEYPaClWkCohDOTVIgtyAyYKGaVx7eXg7eM/3fVtLEmLRQwKHePkd9zQ9ChfgLZvMm3DWvLl0THF/RTDomERe+Ox+RBOAU8sJndMA0hIF0gz+57LJw1zY9vqoS43DbTiJUAFDAFRQP280KNSDNM6xjmCxjENLXF9qrKdnfjv+WoCNkLDfgR8+d8X9qPq320veIKrPgt9pnIa2RKllMlWV5mlzFswHSA4kFCdUJu2uo5h4RDx3ZjAmYrEFxzgLWrxkZK7lgdbqWk0PaGsAmrETThjW4RXPW75QBxAUpReA7JdreYo8Dr0ifrM0rBHf/pDKYO52imyaO9ux++nN0bZEtGM+PiB4CHDz/zt0HHpBVTy4+qLoZnybVdCPj0Z+WhsgqWvmYXMjLJUsARQ1UlxmasqKnAjaDtFj0qzWBRsSx5fuy/NZ19PmJKPTj/Sy1EKp6ubci1izM+gd31oc+AmrY38P54aJhOFw3kDg3Xclkx604hQYauj4AAAA' },
+  { f:'photo-07', pos:'50% 25%', alt:'At home, cheek to cheek',                                                    cap:'Home is Wherever You Are',   thumb:'data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAACQCwCdASokADAAPrFInkmnJCKhLjv7MOAWCUATpluwGz3Nv0lDBkJ0XrHPAKXs1X6wmMWnEwbOwjSLcRWO6EmVUcS5AwYX4WNI+FAegs0gF1zKUBbJ+TCR19oQamwdXQW0/GflAAD+8jJPdzCKhZbDHRMopJ6frzbEUxiUgbXcmy5ZnM3L71p7sDzl3rSRXZcl0TScL79jC9ji6tptlXR/Dcdc2scWn3PtW+Zv7VIH5u5B/QSMRncSxgWll61aUd9uQuoCGs24dHnu4OutOr+gC3u1E6FGQjIwnX3Ap5XAR1M5I1Q4X2MkMcRHKDkbGlw8+8DubKsKkGo8XWWlfYhTmLdM15RMMSsYRzv8aFIBFFfNaNNUWvZikQKWcdv1qLz7jS4mYljZ58Wu35AoGIyRwVFq1O2wRW5OyVuIzcvuZzpKCQAMSBXRC9hASpN/aaOkZ2dnHCbWcfvqjq0dB3dePcMwa3M/co1Uy4RY3lZDJaHuzHl5EcrAaEzE9AqGHUzoj/Orx0+4hA4XPECWpeC9tTOJOYH8n+S23+v8a8yA5WrEEMfQ27g1Rs86rgXS3ExkRTNHx1TjkTUEZxmXnZAx5HxgayDJNEQ9YO4BYTnb2kqGUoYvK/fcEJpFlrJOs0KS0RKoYwnvyUmRqxhDymPuzbG9tlI2ygCrNuXUZTiIwd6RrAAAAA==' },
+  { f:'photo-05', pos:'50% 22%', alt:'The engagement — holding a rose bouquet, tilak on their foreheads',            cap:'A Promise of Forever',       thumb:'data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAACwCgCdASokADAAPrFGm0onI6IhsdM9+OAWCWgAvgOpvqGI0CsAsqU1pogZPlxeGelFlZ41RkyD0aLCKeyTIsMwfZXyQhbn8uPsE26ZeNqPAyePRyTkHNPPIFYIAKAAAP73D8GiiJQmNQGuN07ggVEju06d00kPzX5X6ZSTzn16i3G6rrr5u2myAoKWlP/C8OpuwvTO60Ul7CQLeqhm63sWGZpLT46qRw/PD0eGAcSRRae3WOSybBfHM4Ci1a2wOm+Av5w3Y2nLtZn3kHc9/DEV37FCV+VVKnYn3TdaiFJWjd+jFU5wJDIRN/Sqmm+AIa/JRlw1SNVYx1XpUQyJ9pXn/RdjIdvkFMG/aVkzimzuNpBTTKKrXDOQGBFoJIh+Z1i6TiTEb7n3er5ySdLjip+KEguqG/IYgYdjoh+Gb2fDHjDfxRKe6fAZf5SiPhpjQRYSOnLmQMcF5gptIQikiG+A8xJ8k6b+4KHGeqF+uu9EmFwowNKYTTpcmgFfTHOSaFdYpZKSoVQ+VZl03nph0He5qIeIcmFH/JP5G+A4yOKm5jW8Z0Y052eEZ8doAw2t1/PCPkbffi8yItrS2XuFmRUfdAwuzeLGIsLFE8dBjhCupaCf/PT6ichgDqqu9DnN4NtjPKfukKCFMM+2gQxahZplC5qj474mmZWev6K7By76E0WowAAAAA==' },
+  { f:'photo-03', pos:'50% 28%', alt:'Bhavana and Mukund by a warm wooden wall under a bicycle-wheel chandelier',    cap:'Twinning in Black',          thumb:'data:image/webp;base64,UklGRrwBAABXRUJQVlA4ILABAADQCQCdASokADAAPrFKn0qnJCKhrjgJmOAWCUAXZnE48g/5nLHipESAaVmXDkoTV4a8ok5X0qJtI36wVidoluWy4gBR9TZjHqLSOn092wyw6XfrwtsZ6gAA/vREghrerZcP73AMzDZqz/t4GUCneFQEmSrL/JRFwt9ACbFKzTBFjjSQ7HLbIWfyOyeikUfzNcNOs9blOSkdefwjhBiO2VssomrcwBjP1MWwkJzTM6oq8QYEaGNdnUBqKjmYUhkTCmjz+kXxM9C9SXI5BwCPd6CTplXmE05bLHwg8vuR7EcWu8aRtfJe2r5B0CTXNsHtwRZe9nTDrr5XJCn8VqiHPlBb263lTMr7XZs76T3iVL6YD4e0MSarHlDox1AHwk8w7HLA8FKcqJqEa5M3x931tgbHMi+H6/jMzr6Z++27KBtksTjSLyGEZDOFE+g3ODlVibmb9K2IZgDL9BJBnIf50Cd+b5ja7V1UHaobRUNSAoUD21AhkFwgNwY7GXdaJ3RFj+QpncYmX7CUwnjRGsDdtJrcb3QKvZO0fZcPrLE+he3PRuh0ao5GDfv8n3VIJmxGgAA=' },
+  { f:'photo-10', pos:'50% 45%', alt:'A moonlit rooftop — warm string lights and a bright moon behind them',         cap:'Our first Teej (before shaadi, coz why not)',      thumb:'data:image/webp;base64,UklGRp4BAABXRUJQVlA4IJIBAAAQCACdASogACsAPsFSokwnpKMiKqoA8BgJbACdMwz2Ts2XV0pG+i1TBzBWt73EUsL3kRvaMfTVMt410ky/dFKtfUebIeyfc/cAAP79nj0g8BklF79XXuvyzOPyyJDYp9ZutZKj+7gMXQdnkz6N7jQ+QXmcpvBy18ABaKsHzWlBNswrDLMRgZA5O03xXr88i2o6hE9APXd7zugQjL9JbsPnnhDBkGoJYOBY3G/fONp/xV/VDiH1HCQz8u5fr17DynUApSC5PtIlmVHiDpbEyqTKzLlv3wF49RElRR7QzF4ZtjvTQb15zznIgZfQXX6YpXY8WI4FIjjV/I24eyzBEfP61pJlIdrJbUdmPJxsHCwd3qZwUzDsT2MzktsKtzWq5/D2E0gv9pNIFrCSA9zvIvFe+XY0AGH/20uKC3jkHA7lwXZPDmp0FbFxbzqc34p/uM8FtSREO7tvvp8PVZFSV/x8HVuL/PyBUIA3+8oQAHbFCi7fQD5sFFuwpAGK4ARG5z+8vWIbqNuGkU/Zpo8XlbB2gAA=' },
+  { f:'photo-11', pos:'50% 30%', alt:'A temple selfie after their first Jyotirling darshan — tilak marks on both foreheads', cap:'Our First Jyotirling Darshan', thumb:'data:image/webp;base64,UklGRoQCAABXRUJQVlA4IHgCAACwDACdASokADAAPsVMnUwnpCKiNUgA8BiJbACpJxyD5IhvBP2c7wzUXIz+H0mJFdlEYosGb2Ey/BSlCmLmgUsAYeSZdu3xXq43vz49AJ5ulPZE8cX4XC7EqQDcS7DNhEfP7gs2NiM6LqNgnoHU1AD5ZVa0sb5Zk7PFstMY+f8d9M6wMUedYqcB1Po5tJlv0erBVL0RgIJcSmLb5ZMh57j1bXs96n6JIKb1/e+9UssdkG5cgzlHFJ13n3v0NJ7lFqWwnr08HTxf6A/IVen4G0mYWOO1elUgo1KcZNsT/dmdcSYrE5aNErjmsG9m0aODFOUeWxg7xlLmMxJHsGrBo1uNJUNCLmToTeMgKKx2bIu9pJBEloyRcqWW/IlxhGIXsqmN55pJQJIOWke3FVWRu86KNcK3sEUevAEulEcD73qpLIFfe2S9xN45ObhW/iTgpP6lt3Aay6CItmU8xtAouejhdji8xw3AweoQJ9L/h6tfkJvmHFra1frFFXPpuRSa84RsqYJsHy2t6G88mGWlNbSZhnFtN+bvDh3yGx3+++jWrFj+V7zgn3TACfcnz6qcL7SD3E26puIzYQfp/5uKdjvlMvZ34ZghqB9cPHMsWKjkbTvANt6iojWax4YqidhwCxiAgB+fS0HF6o4gXPtwA50ujHcVunn4lkrIPG6OABDo9TWg1gMHa8P8ujuNNk/gJF7KSgHrEvgO44y21ckdeRrVPj9YqxIGdM0v+RrCqUF4jOJsP7l9vKMf8ftHhVZFXDz/AAffRkJwaVn7jF/kdOKi919erAl2LIVPdG6LKTjRfvF9B8R5oHXbwp8g/Z5UJGy450L6EwAAAA==' },
 ];
 /* ------------------------------------------------------------------
    tiny helpers
@@ -1841,7 +1924,7 @@ const Gate = (function(){
   });
 })();
 /* ------------------------------------------------------------------
-   4B — countdown to 17 Jan 2027, 11:00 IST (day one begins)
+   4B — countdown to 18 Jan 2027, 7:00 pm IST (the wedding evening)
    ------------------------------------------------------------------ */
 (function countdown(){
   const d = $('#cd-d'), h = $('#cd-h'), m = $('#cd-m'), s = $('#cd-s'), done = $('#cd-done');
@@ -2247,39 +2330,46 @@ function glitterActive(){ return Glitter.active(); }
            p(d.getUTCHours()) + p(d.getUTCMinutes()) + p(d.getUTCSeconds()) + 'Z';
   };
   const ANDROID = /android/i.test(navigator.userAgent || '');
+  /* EVENTS iso = 'YYYYMMDDTHHMMSS' — build a real Date the safe way
+     ('2027-01-18T163000:00' is invalid and produced NaN invites) */
+  const when = iso => Date.parse(iso.slice(0,4) + '-' + iso.slice(4,6) + '-' + iso.slice(6,8) +
+    'T' + iso.slice(9,11) + ':' + iso.slice(11,13) + ':' + iso.slice(13,15) + '+05:30');
   $$('[data-ics]').forEach(btn => {
     btn.addEventListener('click', () => {
       const row = btn.closest('.ev-row');
       const i = row ? +row.getAttribute('data-ev') : 0;
       const ev = EVENTS[i];
-      const startMs = Date.parse('2027-01-' + ev.iso.slice(6,8) + 'T' + ev.iso.slice(9) + ':00+05:30');
-      const endMs = startMs + 2*36e5;
-      const title = 'Bhavana & Mukund — ' + ev.name;
-      const details = 'Two days of celebration at Utsav, Jaipur. ' + ev.time + ' onwards.';
+      const parts = ev.parts || [ev];   /* baraat & varmala share one card, two calendar events */
+      const startMs = when(ev.iso);
+      const details = 'Two days of celebration at Utsav, Jaipur. ' +
+        parts.map(p => p.name + ' at ' + p.time + '.').join(' ');
       if (ANDROID){
         /* phones: opening the Calendar app beats a stray .ics download */
         const u = 'https://calendar.google.com/render?action=TEMPLATE' +
-          '&text=' + encodeURIComponent(title) +
-          '&dates=' + fmt(startMs) + '/' + fmt(endMs) +
+          '&text=' + encodeURIComponent('Bhavana & Mukund — ' + parts[0].name) +
+          '&dates=' + fmt(startMs) + '/' + fmt(startMs + 2*36e5) +
           '&details=' + encodeURIComponent(details) +
           '&location=' + encodeURIComponent('Utsav, Jaipur, Rajasthan');
         open(u, '_blank', 'noopener');
         toast(ev.name + ' — save it in the calendar app');
       } else {
-        const icsTxt = [
-          'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Bhavana weds Mukund//Invite//EN','CALSCALE:GREGORIAN',
-          'BEGIN:VEVENT',
-          'UID:bwm-' + ev.iso + '@bhavana-mukund',
-          'DTSTAMP:' + fmt(Date.now()),
-          'DTSTART:' + fmt(startMs),
-          'DTEND:' + fmt(endMs),
-          'SUMMARY:' + title,
-          'DESCRIPTION:' + details,
-          'LOCATION:Utsav, Jaipur, Rajasthan',
-          'END:VEVENT','END:VCALENDAR',
-        ].join('\r\n');
+        const icsTxt = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Bhavana weds Mukund//Invite//EN','CALSCALE:GREGORIAN'];
+        parts.forEach(p => {
+          const s = when(p.iso);
+          icsTxt.push(
+            'BEGIN:VEVENT',
+            'UID:bwm-' + p.iso + '@bhavana-mukund',
+            'DTSTAMP:' + fmt(Date.now()),
+            'DTSTART:' + fmt(s),
+            'DTEND:' + fmt(s + 2*36e5),
+            'SUMMARY:Bhavana & Mukund — ' + p.name,
+            'DESCRIPTION:' + details,
+            'LOCATION:Utsav, Jaipur, Rajasthan',
+            'END:VEVENT');
+        });
+        icsTxt.push('END:VCALENDAR');
         const a = document.createElement('a');
-        a.href = URL.createObjectURL(new Blob([icsTxt], { type: 'text/calendar' }));
+        a.href = URL.createObjectURL(new Blob([icsTxt.join('\r\n')], { type: 'text/calendar' }));
         a.download = 'bhavana-mukund-' + ev.name.toLowerCase().replace(/[^a-z0-9]+/g,'-') + '.ics';
         document.body.appendChild(a); a.click(); a.remove();
         setTimeout(() => URL.revokeObjectURL(a.href), 4000);
@@ -2304,6 +2394,7 @@ const LB = (function(){
     cur = (i + PHOTOS.length) % PHOTOS.length;
     const p = PHOTOS[cur];
     box.style.setProperty('--pos', p.pos);
+    box.style.setProperty('--z', p.zoom || 1);
     th.src = p.thumb; th.alt = p.alt;
     fu.className = 'im fu'; fu.removeAttribute('src');
     fu.style.opacity = '0';
@@ -2348,24 +2439,18 @@ const LB = (function(){
 (function gallery(){
   const strip = $('#galStrip'), capEl = $('#covCapText'), dotsBox = $('#covDots');
   if (!strip) return;
+  const N = PHOTOS.length;
   const items = [], dots = [];
-  let cur = 0, scrollRaf = 0;
-  PHOTOS.forEach((p, i) => {
+  function build(p, real){
     const fig = document.createElement('figure');
     fig.className = 'gal-item';
     fig.innerHTML =
-      '<div class="gal-card"><div class="gal-win" style="--pos:' + p.pos + '">' +
+      '<div class="gal-card"><div class="gal-win" style="--pos:' + p.pos + ';--z:' + (p.zoom || 1) + '">' +
         '<img class="th" alt="' + p.alt.replace(/"/g,'&quot;') + '" src="' + p.thumb + '">' +
         '<img class="fu" alt="" loading="lazy" decoding="async">' +
       '</div></div>';
     strip.appendChild(fig);
     items.push(fig);
-    const d = document.createElement('button');
-    d.className = 'arch-dot'; d.type = 'button';
-    d.setAttribute('aria-label', 'Show photo ' + (i+1) + ' of ' + PHOTOS.length);
-    d.addEventListener('click', () => { setActive(i, true); });
-    dotsBox.appendChild(d);
-    dots.push(d);
     /* full photo only when the strip nears the viewport */
     const io = new IntersectionObserver(es => {
       if (!es[0].isIntersecting) return;
@@ -2376,41 +2461,111 @@ const LB = (function(){
       fu.src = 'images/' + p.f + '.webp';
     }, { rootMargin: '420px' });
     io.observe(fig);
-    fig.addEventListener('click', () => LB.open(i));
+    fig.addEventListener('click', () => LB.open(real));
+  }
+  PHOTOS.forEach((p, i) => {
+    build(p, i);
+    const d = document.createElement('button');
+    d.className = 'arch-dot'; d.type = 'button';
+    d.setAttribute('aria-label', 'Show photo ' + (i+1) + ' of ' + N);
+    dotsBox.appendChild(d);
+    dots.push(d);
   });
-  function setActive(i, glide){
-    cur = clamp(i, 0, PHOTOS.length - 1);
+  /* a twin of every photo rides behind the strip — photo N looks exactly like
+     photo 0, so the loop can revolve forever with no visible rewind */
+  PHOTOS.forEach((p, i) => build(p, i));
+
+  let cur = 0, scrollRaf = 0, userUntil = 0, hover = false, inView = true, autoT = 0;
+  const centerOf  = a => items[a].offsetLeft + items[a].offsetWidth/2;
+  const targetLeft = a => centerOf(a) - strip.clientWidth/2;
+  function glideTo(a){ strip.scrollTo({ left: targetLeft(a), behavior: TIER === 'C' ? 'auto' : 'smooth' }); }
+  function nearestAbs(){
+    const center = strip.scrollLeft + strip.clientWidth/2;
+    let best = 0, bd = 1e9;
+    for (let i = 0; i < items.length; i++){
+      const d = Math.abs(centerOf(i) - center);
+      if (d < bd){ bd = d; best = i; }
+    }
+    return best;
+  }
+  /* seam: if the strip rests on a twin (index >= N), hop back to its twin —
+     the pixels are identical, so the hop cannot be seen */
+  function normalize(){
+    let a = nearestAbs();
+    if (a >= N){
+      strip.scrollTo({ left: targetLeft(a - N), behavior: 'auto' });
+      a -= N;
+    }
+    return a;
+  }
+  function setActive(i){
+    cur = ((i % N) + N) % N;
     capEl.textContent = PHOTOS[cur].cap;
     dots.forEach((d, k) => d.classList.toggle('is-active', k === cur));
-    items.forEach((f, k) => f.classList.toggle('is-active', k === cur));
-    if (glide){
-      const target = items[cur].offsetLeft + items[cur].offsetWidth/2 - strip.clientWidth/2;
-      strip.scrollTo({ left: target, behavior: TIER === 'C' ? 'auto' : 'smooth' });
-    }
+    items.forEach((f, k) => f.classList.toggle('is-active', (k % N) === cur));
   }
   strip.addEventListener('scroll', () => {
     if (scrollRaf) return;
     scrollRaf = requestAnimationFrame(() => {
       scrollRaf = 0;
       if (strip.scrollWidth <= strip.clientWidth + 4) return;
-      const center = strip.scrollLeft + strip.clientWidth/2;
-      let best = 0, bd = 1e9;
-      items.forEach((f, i) => {
-        const c = f.offsetLeft + f.offsetWidth/2;
-        const d = Math.abs(c - center);
-        if (d < bd){ bd = d; best = i; }
-      });
-      if (best !== cur) setActive(best, false);
+      const real = nearestAbs() % N;
+      if (real !== cur) setActive(real);
     });
   }, { passive: true });
-  $('#covPrev').addEventListener('click', () => setActive(cur-1, true));
-  $('#covNext').addEventListener('click', () => setActive(cur+1, true));
+  /* the revolve — one photo every few heartbeats; it pauses for the guest
+     (touch, hover, arrows, lightbox) and drifts on when they are done */
+  function autoOk(){
+    return TIER !== 'C' && inView && !hover && !document.hidden &&
+           Date.now() >= userUntil && !document.body.classList.contains('locked');
+  }
+  function tick(){
+    autoT = 0;
+    if (autoOk()){
+      const a = normalize() + 1;          /* may land on the first twin — fine */
+      glideTo(a);
+      setActive(a % N);
+    }
+    schedule();
+  }
+  function schedule(){
+    if (TIER === 'C') return;
+    clearTimeout(autoT); autoT = setTimeout(tick, 3800);
+  }
+  function userPause(){ userUntil = Date.now() + 7000; schedule(); }
+  strip.addEventListener('pointerdown', userPause, { passive: true });
+  strip.addEventListener('touchstart', userPause, { passive: true });
+  if (FINE){
+    strip.addEventListener('pointerenter', () => { hover = true; });
+    strip.addEventListener('pointerleave', () => { hover = false; schedule(); });
+  }
+  const vio = new IntersectionObserver(es => {
+    inView = es[0].isIntersecting;
+    if (inView) schedule();
+  }, { threshold: .18 });
+  vio.observe($('#cov'));
+  function step(dir){
+    userPause();
+    const a = normalize() + dir;
+    const to = a < 0 ? N - 1 : a;
+    glideTo(to);
+    setActive(to);
+  }
+  $('#covPrev').addEventListener('click', () => step(-1));
+  $('#covNext').addEventListener('click', () => step(1));
+  dots.forEach((d, i) => d.addEventListener('click', () => {
+    userPause();
+    normalize();
+    glideTo(i);
+    setActive(i);
+  }));
   $('#cov').addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft'){ setActive(cur-1, true); e.preventDefault(); }
-    else if (e.key === 'ArrowRight'){ setActive(cur+1, true); e.preventDefault(); }
-    else if (e.key === 'Enter'){ LB.open(cur); }
+    if (e.key === 'ArrowLeft'){ step(-1); e.preventDefault(); }
+    else if (e.key === 'ArrowRight'){ step(1); e.preventDefault(); }
+    else if (e.key === 'Enter'){ userPause(); LB.open(cur); }
   });
-  setActive(0, false);
+  setActive(0);
+  schedule();
 })();
 /* ------------------------------------------------------------------
    colour chips (event cards)
@@ -2441,27 +2596,52 @@ function postToSheet(url, payload){
    ------------------------------------------------------------------ */
 (function rsvp(){
   const form = $('#rsvpForm'), yes = $('#tgYes'), no = $('#tgNo'),
-        nameI = $('#rsvpName'), guestsI = $('#rsvpGuests'), notesI = $('#rsvpNotes'),
+        bride = $('#tgBride'), groom = $('#tgGroom'),
+        nameI = $('#rsvpName'), guestsI = $('#rsvpGuests'),
+        whenI = $('#rsvpWhen'), howI = $('#rsvpHow'),
         hp = $('#rsvpHp'), review = $('#rsvpReview'), ok = $('#rsvpOk');
-  let attending = true;
+  let attending = true, side = '';
   yes.addEventListener('click', () => { attending = true; yes.setAttribute('aria-pressed','true'); no.setAttribute('aria-pressed','false'); });
   no.addEventListener('click',  () => { attending = false; no.setAttribute('aria-pressed','true'); yes.setAttribute('aria-pressed','false'); });
+  function pickSide(btn, other, val){
+    side = val;
+    btn.setAttribute('aria-pressed','true'); other.setAttribute('aria-pressed','false');
+    bride.classList.remove('warn'); groom.classList.remove('warn');
+  }
+  bride.addEventListener('click', () => pickSide(bride, groom, 'Bride side'));
+  groom.addEventListener('click', () => pickSide(groom, bride, 'Groom side'));
   function bad(input, on){ input.closest('.fld').classList.toggle('bad', on); return on; }
   function buildMsg(){
-    return [
+    const lines = [
       'Wedding RSVP — Mukund & Bhavana',
       'Name: ' + nameI.value.trim(),
+      'Side: ' + side,
       'Attending: ' + (attending ? 'Joyfully accept' : 'Regretfully decline'),
       'Guests: ' + guestsI.value,
-      (notesI.value.trim() ? 'Notes: ' + notesI.value.trim() : ''),
-    ].filter(Boolean).join('\n');
+    ];
+    if (attending){
+      lines.push('Coming: ' + whenI.value, 'Travel: ' + howI.value);
+    }
+    return lines.filter(Boolean).join('\n');
   }
   form.addEventListener('submit', e => {
     e.preventDefault();
     if (hp.value) return;                       /* honeypot */
+    if (!side){
+      bride.classList.add('warn'); groom.classList.add('warn');
+      toast('Please choose Bride side or Groom side');
+      bride.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      return;
+    }
     let fail = false;
     fail = bad(nameI, nameI.value.trim().length < 2) || fail;
     fail = bad(guestsI, !(+guestsI.value >= 1 && +guestsI.value <= 8)) || fail;
+    if (attending){
+      fail = bad(whenI, !whenI.value) || fail;
+      fail = bad(howI, !howI.value) || fail;
+    } else {
+      bad(whenI, false); bad(howI, false);
+    }
     if (fail){ toast('Please check the highlighted fields'); return; }
     const msg = buildMsg();
     if (CONFIG.RSVP_ENDPOINT){
@@ -2469,8 +2649,8 @@ function postToSheet(url, payload){
       btn.disabled = true; btn.textContent = 'SENDING…';
       postToSheet(CONFIG.RSVP_ENDPOINT, {
         type: 'rsvp',
-        name: nameI.value.trim(), attending, guests: +guestsI.value,
-        notes: notesI.value.trim(),
+        name: nameI.value.trim(), side, attending, guests: +guestsI.value,
+        when: attending ? whenI.value : '', transport: attending ? howI.value : '',
       }).then(() => {
         form.style.display = 'none'; ok.classList.add('on');
         $('#okText').textContent = 'Thank you, ' + nameI.value.trim() + ' — your reply is with the family.';
@@ -2619,6 +2799,8 @@ if (CONFIG.HASHTAG){
 }
 if (CONFIG.GROOM.parents){ const el = $('#cpGroomParents'); if (el){ el.hidden = false; el.textContent = CONFIG.GROOM.parents; } }
 if (CONFIG.BRIDE.parents){ const el = $('#cpBrideParents'); if (el){ el.hidden = false; el.textContent = CONFIG.BRIDE.parents; } }
+if (CONFIG.GROOM.grand){ const el = $('#cpGroomGrand'); if (el){ el.hidden = false; el.textContent = CONFIG.GROOM.grand; } }
+if (CONFIG.BRIDE.grand){ const el = $('#cpBrideGrand'); if (el){ el.hidden = false; el.textContent = CONFIG.BRIDE.grand; } }
 if (CONFIG.MAPS_URL){ const d = $('#dirBtn'); if (d) d.href = CONFIG.MAPS_URL; }
 /* ------------------------------------------------------------------
    boot
